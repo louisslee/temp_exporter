@@ -85,7 +85,7 @@ func recordMetrics() {
 				fmt.Println(err)
 			}
 
-			temperatureStr, err := getInfoByRegexp(output, `Tctl:\s*\+([0-9.]+)°C`)
+			temperatureStr, err := getInfoByRegexp(output, `id 0:\s*\+([0-9.]+)°C`)
 			powerStr, err := getInfoByRegexp(output, `PPT:\s*([0-9.]+)\s*W`)
 
 			temperature, err = strconv.ParseFloat(temperatureStr, 64)
